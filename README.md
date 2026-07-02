@@ -1,5 +1,9 @@
 # LlamaIndex Tools Integration: SearchApi
 
+[![PyPI version](https://img.shields.io/pypi/v/llama-index-tools-searchapi.svg)](https://pypi.org/project/llama-index-tools-searchapi/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+
 Multi-engine web search tool for LlamaIndex agents powered by [SearchApi.io](https://www.searchapi.io).
 
 SearchApi provides structured data from 100+ search engines through a single API. This integration supports Google, Google News, Google Shopping, Google Jobs, YouTube, Bing, and Baidu.
