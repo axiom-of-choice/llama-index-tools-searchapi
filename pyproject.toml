@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "llama-index-tools-searchapi"
+version = "0.1.0"
+description = "LlamaIndex tool integration for SearchApi.io — multi-engine web search"
+authors = [{name = "Isaac Hernandez", email = "isadohergar@gmail.com"}]
+requires-python = ">=3.10,<4.0"
+readme = "README.md"
+license = "MIT"
+dependencies = [
+    "llama-index-core>=0.13.0,<0.15",
+    "requests>=2.28.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=7.2.0",
+    "pytest-mock>=3.11.0",
+    "ruff>=0.11.0",
+    "mypy>=1.0.0",
+    "types-requests>=2.28.0",
+]
+
+[tool.hatch.build.targets.sdist]
+include = ["llama_index/"]
+
+[tool.hatch.build.targets.wheel]
+include = ["llama_index/"]
+
+[tool.llamahub]
+contains_example = false
+import_path = "llama_index.tools.searchapi"
+
+[tool.llamahub.class_authors]
+SearchApiToolSpec = "axiom-of-choice"
+
+[tool.mypy]
+disallow_untyped_defs = true
+exclude = ["build", "examples", "venv"]
+ignore_missing_imports = true
+python_version = "3.10"
+
+[tool.ruff]
+target-version = "py310"
