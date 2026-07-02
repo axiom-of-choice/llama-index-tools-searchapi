@@ -39,9 +39,12 @@ SearchApiToolSpec = "axiom-of-choice"
 
 [tool.mypy]
 disallow_untyped_defs = true
-exclude = ["build", "examples", "venv"]
+namespace_packages = true
+explicit_package_bases = true
+exclude = ["build", "examples", "venv", ".venv"]
 ignore_missing_imports = true
 python_version = "3.10"
+mypy_path = "."
 
 [tool.ruff]
 target-version = "py310"
