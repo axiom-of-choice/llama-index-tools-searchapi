@@ -25,9 +25,7 @@ class TestSearchApiToolSpec:
         assert tool.num_results == 10
 
     def test_custom_initialization(self):
-        tool = SearchApiToolSpec(
-            api_key="test_key", engine="youtube", num_results=5
-        )
+        tool = SearchApiToolSpec(api_key="test_key", engine="youtube", num_results=5)
         assert tool.engine == "youtube"
         assert tool.num_results == 5
 
